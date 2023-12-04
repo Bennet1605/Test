@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="hi"></div>
+    <script>
+
+        //Reverse a String
+        const reverse=(str)=>{
+            let arr=str.split("");
+            arr.reverse();
+            str=arr.join('');
+            console.log(str);
+        }
+        str="Bennet";
+        reverse(str);
+
+        
+        //prime
+        const prime=(num)=>{
+            let prime=true;
+            for(let i=2;i<=num/2;i++){
+                if(num%i==0){
+                    console.log(`${num} is Not a Prime Nmber`);
+                    prime=false;
+                    break;
+                }
+            }
+            if(prime){
+                console.log(`${num} is Prime Number`);
+            }
+        }
+        
+        num=7;
+        prime(num);
+
+
+        //Object
+        const a=[{Name:"Bennet",age:22},{Name:"Jasper",age:20}];
+        for(let i=0;i<a.length;i++){
+            console.log(a[i]);
+            console.log("Name : "+a[i].Name);
+            console.log("Age : "+a[i].age);
+        }
+
+        let r=document.getElementById("hi");
+        r.innerHTML="Hi"
+
+
+        console.log("Dislay the tax rates");
+        const income=260000;
+        let tax;
+        if(income>=0 && income<=250000){
+            console.log("Tax amount=0");
+        }
+        else if(income>250000 && income<=500000){
+            tax=5/100*income;
+            console.log(`Tax amount=${tax}`);
+        }
+        else if(income>500000 && income<=1000000){
+            tax=20/100*income+12,500;
+            console.log(`Tax amount=${tax}`);
+        }
+        else if(income>1000000){
+            tax=30/100*income+112,500;
+            console.log(`Tax amount=${tax}`);
+        }
+        else{
+            console.log("Invalid Amount");
+        }
+    </script>
+</body>
+</html>
